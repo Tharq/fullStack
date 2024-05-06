@@ -35,11 +35,9 @@ public class Controller {
             return new ResponseEntity<>("Logged in...", HttpStatus.OK);
         }
 
-        else if (myUserDetailService.loadUserByUsername(name).getUsername()==null){
 
             return new ResponseEntity<>("Login failed", HttpStatus.BAD_REQUEST);
-        }
-        return null;
+
     }
 
     @PostMapping("/register")
